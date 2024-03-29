@@ -5,7 +5,7 @@ import {
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from "@/src/components/ui/Toast/Toast"
+} from "@/src/components/ui/Toast"
 import { useToast } from "@/src/lib/use-toast"
 
 export function Toaster() {

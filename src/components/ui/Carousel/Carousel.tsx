@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button } from "@/src/components/ui/Button/Button"
+import { Button } from "@/src/components/ui/Button"
 import { cn } from "@/src/lib/utils"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,

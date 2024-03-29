@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ButtonProps, buttonVariants } from "@/src/components/ui/Button/Button"
+import { ButtonProps, buttonVariants } from "@/src/components/ui/Button"
 import { cn } from "@/src/lib/utils"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
