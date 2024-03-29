@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { buttonVariants } from "@/src/components/ui/button"
+import { buttonVariants } from "@/src/components/ui/Button"
 
 import { siteConfig } from "@/config/site"
 
