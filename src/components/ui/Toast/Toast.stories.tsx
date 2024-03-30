@@ -64,6 +64,7 @@ export const _Toast: Story = {
                       description: "Your message has been sent.",
                     })
                   }}
+                  onClickCapture={handleClick}
                 >
                   Show Toast
                 </Button>
@@ -85,6 +86,7 @@ export const _Toast: Story = {
                       description: "There was a problem with your request.",
                     })
                   }}
+                  onClickCapture={handleClick}
                 >
                   Show Toast
                 </Button>
@@ -109,6 +111,7 @@ export const _Toast: Story = {
                       ),
                     })
                   }}
+                  onClickCapture={handleClick}
                 >
                   Show Toast
                 </Button>
@@ -134,6 +137,7 @@ export const _Toast: Story = {
                       ),
                     })
                   }}
+                  onClickCapture={handleClick}
                 >
                   Show Toast
                 </Button>

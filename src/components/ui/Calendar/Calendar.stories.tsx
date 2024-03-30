@@ -144,7 +144,9 @@ export const _Calendar: Story = {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit">Submit</Button>
+                  <Button type="submit" onClick={handleClick}>
+                    Submit
+                  </Button>
                 </form>
               </Form>
             </div>
