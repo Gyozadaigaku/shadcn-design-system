@@ -200,57 +200,53 @@ export const _Combobox: Story = {
           <dt className="m-0">Default</dt>
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
-              <div className="flex flex-row items-start space-x-2">
-                <Popover open={open} onOpenChange={setOpen}>
-                  <PopoverTrigger asChild>
-                    <Button
-                      variant="outline"
-                      role="combobox"
-                      aria-expanded={open}
-                      className="w-[200px] justify-between"
-                      onClick={handleClick}
-                    >
-                      {value
-                        ? frameworks.find(
-                            (framework) => framework.value === value
-                          )?.label
-                        : "Select framework..."}
-                      <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-[200px] p-0">
-                    <Command>
-                      <CommandInput placeholder="Search framework..." />
-                      <CommandEmpty>No framework found.</CommandEmpty>
-                      <CommandGroup>
-                        {frameworks.map((framework) => (
-                          <CommandItem
-                            key={framework.value}
-                            value={framework.value}
-                            onSelect={(currentValue) => {
-                              handleClick()
-                              setValue(
-                                currentValue === value ? "" : currentValue
-                              )
-                              setOpen(false)
-                            }}
-                          >
-                            <Check
-                              className={cn(
-                                "mr-2 size-4",
-                                value === framework.value
-                                  ? "opacity-100"
-                                  : "opacity-0"
-                              )}
-                            />
-                            {framework.label}
-                          </CommandItem>
-                        ))}
-                      </CommandGroup>
-                    </Command>
-                  </PopoverContent>
-                </Popover>
-              </div>
+              <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={open}
+                    className="w-[200px] justify-between"
+                    onClick={handleClick}
+                  >
+                    {value
+                      ? frameworks.find(
+                          (framework) => framework.value === value
+                        )?.label
+                      : "Select framework..."}
+                    <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[200px] p-0">
+                  <Command>
+                    <CommandInput placeholder="Search framework..." />
+                    <CommandEmpty>No framework found.</CommandEmpty>
+                    <CommandGroup>
+                      {frameworks.map((framework) => (
+                        <CommandItem
+                          key={framework.value}
+                          value={framework.value}
+                          onSelect={(currentValue) => {
+                            handleClick()
+                            setValue(currentValue === value ? "" : currentValue)
+                            setOpen(false)
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 size-4",
+                              value === framework.value
+                                ? "opacity-100"
+                                : "opacity-0"
+                            )}
+                          />
+                          {framework.label}
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </Command>
+                </PopoverContent>
+              </Popover>
             </div>
           </dd>
         </div>
@@ -259,57 +255,53 @@ export const _Combobox: Story = {
           <dt className="m-0">Combobox</dt>
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
-              <div className="flex flex-row items-start space-x-2">
-                <Popover open={comboboxOpen} onOpenChange={setComboboxOpen}>
-                  <PopoverTrigger asChild>
-                    <Button
-                      variant="outline"
-                      role="combobox"
-                      aria-expanded={comboboxOpen}
-                      className="w-[200px] justify-between"
-                      onClick={handleClick}
-                    >
-                      {value
-                        ? frameworks.find(
-                            (framework) => framework.value === value
-                          )?.label
-                        : "Select framework..."}
-                      <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-[200px] p-0">
-                    <Command>
-                      <CommandInput placeholder="Search framework..." />
-                      <CommandEmpty>No framework found.</CommandEmpty>
-                      <CommandGroup>
-                        {frameworks.map((framework) => (
-                          <CommandItem
-                            key={framework.value}
-                            value={framework.value}
-                            onSelect={(currentValue) => {
-                              handleClick()
-                              setValue(
-                                currentValue === value ? "" : currentValue
-                              )
-                              setComboboxOpen(false)
-                            }}
-                          >
-                            <Check
-                              className={cn(
-                                "mr-2 size-4",
-                                value === framework.value
-                                  ? "opacity-100"
-                                  : "opacity-0"
-                              )}
-                            />
-                            {framework.label}
-                          </CommandItem>
-                        ))}
-                      </CommandGroup>
-                    </Command>
-                  </PopoverContent>
-                </Popover>
-              </div>
+              <Popover open={comboboxOpen} onOpenChange={setComboboxOpen}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={comboboxOpen}
+                    className="w-[200px] justify-between"
+                    onClick={handleClick}
+                  >
+                    {value
+                      ? frameworks.find(
+                          (framework) => framework.value === value
+                        )?.label
+                      : "Select framework..."}
+                    <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[200px] p-0">
+                  <Command>
+                    <CommandInput placeholder="Search framework..." />
+                    <CommandEmpty>No framework found.</CommandEmpty>
+                    <CommandGroup>
+                      {frameworks.map((framework) => (
+                        <CommandItem
+                          key={framework.value}
+                          value={framework.value}
+                          onSelect={(currentValue) => {
+                            handleClick()
+                            setValue(currentValue === value ? "" : currentValue)
+                            setComboboxOpen(false)
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 size-4",
+                              value === framework.value
+                                ? "opacity-100"
+                                : "opacity-0"
+                            )}
+                          />
+                          {framework.label}
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </Command>
+                </PopoverContent>
+              </Popover>
             </div>
           </dd>
         </div>
@@ -319,61 +311,59 @@ export const _Combobox: Story = {
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
               <div className="flex flex-row items-start space-x-2">
-                <div className="flex items-center space-x-4">
-                  <p className="text-sm text-muted-foreground">Status</p>
-                  <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-[150px] justify-start"
-                      >
-                        {selectedStatus ? (
-                          <>
-                            <selectedStatus.icon className="mr-2 size-4 shrink-0" />
-                            {selectedStatus.label}
-                          </>
-                        ) : (
-                          <>+ Set status</>
-                        )}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="p-0" side="right" align="start">
-                      <Command>
-                        <CommandInput placeholder="Change status..." />
-                        <CommandList>
-                          <CommandEmpty>No results found.</CommandEmpty>
-                          <CommandGroup>
-                            {statuses.map((status) => (
-                              <CommandItem
-                                key={status.value}
-                                value={status.value}
-                                onSelect={(value) => {
-                                  setSelectedStatus(
-                                    statuses.find(
-                                      (priority) => priority.value === value
-                                    ) || null
-                                  )
-                                  setOpen(false)
-                                }}
-                              >
-                                <status.icon
-                                  className={cn(
-                                    "mr-2 size-4",
-                                    status.value === selectedStatus?.value
-                                      ? "opacity-100"
-                                      : "opacity-40"
-                                  )}
-                                />
-                                <span>{status.label}</span>
-                              </CommandItem>
-                            ))}
-                          </CommandGroup>
-                        </CommandList>
-                      </Command>
-                    </PopoverContent>
-                  </Popover>
-                </div>
+                <p className="text-sm text-muted-foreground">Status</p>
+                <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-[150px] justify-start"
+                    >
+                      {selectedStatus ? (
+                        <>
+                          <selectedStatus.icon className="mr-2 size-4 shrink-0" />
+                          {selectedStatus.label}
+                        </>
+                      ) : (
+                        <>+ Set status</>
+                      )}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="p-0" side="right" align="start">
+                    <Command>
+                      <CommandInput placeholder="Change status..." />
+                      <CommandList>
+                        <CommandEmpty>No results found.</CommandEmpty>
+                        <CommandGroup>
+                          {statuses.map((status) => (
+                            <CommandItem
+                              key={status.value}
+                              value={status.value}
+                              onSelect={(value) => {
+                                setSelectedStatus(
+                                  statuses.find(
+                                    (priority) => priority.value === value
+                                  ) || null
+                                )
+                                setOpen(false)
+                              }}
+                            >
+                              <status.icon
+                                className={cn(
+                                  "mr-2 size-4",
+                                  status.value === selectedStatus?.value
+                                    ? "opacity-100"
+                                    : "opacity-40"
+                                )}
+                              />
+                              <span>{status.label}</span>
+                            </CommandItem>
+                          ))}
+                        </CommandGroup>
+                      </CommandList>
+                    </Command>
+                  </PopoverContent>
+                </Popover>
               </div>
             </div>
           </dd>
@@ -383,80 +373,78 @@ export const _Combobox: Story = {
           <dt className="m-0">Dropdown menu</dt>
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
-              <div className="flex flex-row items-start space-x-2">
-                <div className="flex items-center space-x-4">
-                  <p className="text-sm text-muted-foreground">Status</p>
-                  <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
-                    <p className="text-sm font-medium leading-none">
-                      <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
-                        {label}
-                      </span>
-                      <span className="text-muted-foreground">
-                        Create a new project
-                      </span>
-                    </p>
-                    <DropdownMenu
-                      open={dropdownMenuopen}
-                      onOpenChange={setDropdownMenuOpen}
-                    >
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="sm">
-                          <MoreHorizontal />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end" className="w-[200px]">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuGroup>
-                          <DropdownMenuItem>
-                            <User className="mr-2 size-4" />
-                            Assign to...
-                          </DropdownMenuItem>
-                          <DropdownMenuItem>
-                            <Calendar className="mr-2 size-4" />
-                            Set due date...
-                          </DropdownMenuItem>
-                          <DropdownMenuSeparator />
-                          <DropdownMenuSub>
-                            <DropdownMenuSubTrigger>
-                              <Tags className="mr-2 size-4" />
-                              Apply label
-                            </DropdownMenuSubTrigger>
-                            <DropdownMenuSubContent className="p-0">
-                              <Command>
-                                <CommandInput
-                                  placeholder="Filter label..."
-                                  autoFocus={true}
-                                />
-                                <CommandList>
-                                  <CommandEmpty>No label found.</CommandEmpty>
-                                  <CommandGroup>
-                                    {labels.map((label) => (
-                                      <CommandItem
-                                        key={label}
-                                        value={label}
-                                        onSelect={(value) => {
-                                          setLabel(value)
-                                          setDropdownMenuOpen(false)
-                                        }}
-                                      >
-                                        {label}
-                                      </CommandItem>
-                                    ))}
-                                  </CommandGroup>
-                                </CommandList>
-                              </Command>
-                            </DropdownMenuSubContent>
-                          </DropdownMenuSub>
-                          <DropdownMenuSeparator />
-                          <DropdownMenuItem className="text-red-600">
-                            <Trash className="mr-2 size-4" />
-                            Delete
-                            <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
-                          </DropdownMenuItem>
-                        </DropdownMenuGroup>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
+              <div className="flex items-center space-x-4">
+                <p className="text-sm text-muted-foreground">Status</p>
+                <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
+                  <p className="text-sm font-medium leading-none">
+                    <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+                      {label}
+                    </span>
+                    <span className="text-muted-foreground">
+                      Create a new project
+                    </span>
+                  </p>
+                  <DropdownMenu
+                    open={dropdownMenuopen}
+                    onOpenChange={setDropdownMenuOpen}
+                  >
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="sm">
+                        <MoreHorizontal />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-[200px]">
+                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                      <DropdownMenuGroup>
+                        <DropdownMenuItem>
+                          <User className="mr-2 size-4" />
+                          Assign to...
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                          <Calendar className="mr-2 size-4" />
+                          Set due date...
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuSub>
+                          <DropdownMenuSubTrigger>
+                            <Tags className="mr-2 size-4" />
+                            Apply label
+                          </DropdownMenuSubTrigger>
+                          <DropdownMenuSubContent className="p-0">
+                            <Command>
+                              <CommandInput
+                                placeholder="Filter label..."
+                                autoFocus={true}
+                              />
+                              <CommandList>
+                                <CommandEmpty>No label found.</CommandEmpty>
+                                <CommandGroup>
+                                  {labels.map((label) => (
+                                    <CommandItem
+                                      key={label}
+                                      value={label}
+                                      onSelect={(value) => {
+                                        setLabel(value)
+                                        setDropdownMenuOpen(false)
+                                      }}
+                                    >
+                                      {label}
+                                    </CommandItem>
+                                  ))}
+                                </CommandGroup>
+                              </CommandList>
+                            </Command>
+                          </DropdownMenuSubContent>
+                        </DropdownMenuSub>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem className="text-red-600">
+                          <Trash className="mr-2 size-4" />
+                          Delete
+                          <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
+                        </DropdownMenuItem>
+                      </DropdownMenuGroup>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </div>
             </div>
@@ -468,60 +456,58 @@ export const _Combobox: Story = {
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
               <div className="flex flex-row items-start space-x-2">
-                <div className="flex items-center space-x-4">
-                  <p className="text-sm text-muted-foreground">Status</p>
-                  {isDesktop ? (
-                    <Popover
-                      open={responsiveOpen}
-                      onOpenChange={setResponsiveOpen}
-                    >
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className="w-[150px] justify-start"
-                        >
-                          {selectedStatus ? (
-                            <>{selectedStatus.label}</>
-                          ) : (
-                            <>+ Set status</>
-                          )}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-[200px] p-0" align="start">
+                <p className="text-sm text-muted-foreground">Status</p>
+                {isDesktop ? (
+                  <Popover
+                    open={responsiveOpen}
+                    onOpenChange={setResponsiveOpen}
+                  >
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="w-[150px] justify-start"
+                      >
+                        {selectedStatus ? (
+                          <>{selectedStatus.label}</>
+                        ) : (
+                          <>+ Set status</>
+                        )}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-[200px] p-0" align="start">
+                      <StatusList
+                        setOpen={setResponsiveOpen}
+                        setSelectedStatus={setSelectedStatus}
+                      />
+                    </PopoverContent>
+                  </Popover>
+                ) : (
+                  <Drawer
+                    open={responsiveOpen}
+                    onOpenChange={setResponsiveOpen}
+                  >
+                    <DrawerTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="w-[150px] justify-start"
+                      >
+                        {selectedStatus ? (
+                          <>{selectedStatus.label}</>
+                        ) : (
+                          <>+ Set status</>
+                        )}
+                      </Button>
+                    </DrawerTrigger>
+                    <DrawerContent>
+                      <div className="mt-4 border-t">
                         <StatusList
                           setOpen={setResponsiveOpen}
                           setSelectedStatus={setSelectedStatus}
                         />
-                      </PopoverContent>
-                    </Popover>
-                  ) : (
-                    <Drawer
-                      open={responsiveOpen}
-                      onOpenChange={setResponsiveOpen}
-                    >
-                      <DrawerTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className="w-[150px] justify-start"
-                        >
-                          {selectedStatus ? (
-                            <>{selectedStatus.label}</>
-                          ) : (
-                            <>+ Set status</>
-                          )}
-                        </Button>
-                      </DrawerTrigger>
-                      <DrawerContent>
-                        <div className="mt-4 border-t">
-                          <StatusList
-                            setOpen={setResponsiveOpen}
-                            setSelectedStatus={setSelectedStatus}
-                          />
-                        </div>
-                      </DrawerContent>
-                    </Drawer>
-                  )}
-                </div>
+                      </div>
+                    </DrawerContent>
+                  </Drawer>
+                )}
               </div>
             </div>
           </dd>
@@ -532,84 +518,80 @@ export const _Combobox: Story = {
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
               <div className="flex flex-row items-start space-x-2">
-                <div className="flex items-center space-x-4">
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-6"
-                    >
-                      <FormField
-                        control={form.control}
-                        name="language"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-col">
-                            <FormLabel>Language</FormLabel>
-                            <Popover>
-                              <PopoverTrigger asChild>
-                                <FormControl>
-                                  <Button
-                                    variant="outline"
-                                    role="combobox"
-                                    className={cn(
-                                      "w-[200px] justify-between",
-                                      !field.value && "text-muted-foreground"
-                                    )}
-                                  >
-                                    {field.value
-                                      ? languages.find(
-                                          (language) =>
-                                            language.value === field.value
-                                        )?.label
-                                      : "Select language"}
-                                    <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
-                                  </Button>
-                                </FormControl>
-                              </PopoverTrigger>
-                              <PopoverContent className="w-[200px] p-0">
-                                <Command>
-                                  <CommandInput placeholder="Search language..." />
-                                  <CommandEmpty>
-                                    No language found.
-                                  </CommandEmpty>
-                                  <CommandGroup>
-                                    {languages.map((language) => (
-                                      <CommandItem
-                                        value={language.label}
-                                        key={language.value}
-                                        onSelect={() => {
-                                          form.setValue(
-                                            "language",
-                                            language.value
-                                          )
-                                        }}
-                                      >
-                                        <Check
-                                          className={cn(
-                                            "mr-2 size-4",
-                                            language.value === field.value
-                                              ? "opacity-100"
-                                              : "opacity-0"
-                                          )}
-                                        />
-                                        {language.label}
-                                      </CommandItem>
-                                    ))}
-                                  </CommandGroup>
-                                </Command>
-                              </PopoverContent>
-                            </Popover>
-                            <FormDescription>
-                              This is the language that will be used in the
-                              dashboard.
-                            </FormDescription>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <Button type="submit">Submit</Button>
-                    </form>
-                  </Form>
-                </div>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-6"
+                  >
+                    <FormField
+                      control={form.control}
+                      name="language"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-col">
+                          <FormLabel>Language</FormLabel>
+                          <Popover>
+                            <PopoverTrigger asChild>
+                              <FormControl>
+                                <Button
+                                  variant="outline"
+                                  role="combobox"
+                                  className={cn(
+                                    "w-[200px] justify-between",
+                                    !field.value && "text-muted-foreground"
+                                  )}
+                                >
+                                  {field.value
+                                    ? languages.find(
+                                        (language) =>
+                                          language.value === field.value
+                                      )?.label
+                                    : "Select language"}
+                                  <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
+                                </Button>
+                              </FormControl>
+                            </PopoverTrigger>
+                            <PopoverContent className="w-[200px] p-0">
+                              <Command>
+                                <CommandInput placeholder="Search language..." />
+                                <CommandEmpty>No language found.</CommandEmpty>
+                                <CommandGroup>
+                                  {languages.map((language) => (
+                                    <CommandItem
+                                      value={language.label}
+                                      key={language.value}
+                                      onSelect={() => {
+                                        form.setValue(
+                                          "language",
+                                          language.value
+                                        )
+                                      }}
+                                    >
+                                      <Check
+                                        className={cn(
+                                          "mr-2 size-4",
+                                          language.value === field.value
+                                            ? "opacity-100"
+                                            : "opacity-0"
+                                        )}
+                                      />
+                                      {language.label}
+                                    </CommandItem>
+                                  ))}
+                                </CommandGroup>
+                              </Command>
+                            </PopoverContent>
+                          </Popover>
+                          <FormDescription>
+                            This is the language that will be used in the
+                            dashboard.
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit">Submit</Button>
+                  </form>
+                </Form>
               </div>
             </div>
           </dd>
