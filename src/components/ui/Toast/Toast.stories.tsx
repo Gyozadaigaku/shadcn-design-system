@@ -26,7 +26,7 @@ export const _Toast: Story = {
     return (
       <dl className="m-0 space-y-6 p-4">
         <div>
-          <dt className="m-0">Toast</dt>
+          <dt className="m-0">Default</dt>
           <dd className="mx-0 mt-2">
             <div className="flex flex-row justify-start gap-x-8 gap-y-4">
               <div className="flex flex-row items-start space-x-2">
