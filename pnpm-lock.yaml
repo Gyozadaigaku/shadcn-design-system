@@ -230,7 +230,7 @@ devDependencies:
     specifier: ^3.13.0
     version: 3.15.1(tailwindcss@3.4.3)
   postcss:
-    specifier: ^8.4.24
+    specifier: ^8.4.38
     version: 8.4.38
   prettier:
     specifier: ^2.8.8
