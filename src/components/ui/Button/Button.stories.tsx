@@ -39,7 +39,11 @@ export const _Button: Story = {
                   <EnvelopeOpenIcon className="ml-2 size-4" />
                 </Button>
                 <Button variant="outline" size="icon" onClick={handleClick}>
-                  <ChevronRightIcon className="size-4" />
+                  <ChevronRightIcon
+                    className="size-4"
+                    role="img"
+                    aria-label="Next page"
+                  />
                 </Button>
               </div>
               <div className="flex flex-wrap gap-2 [&:empty]:gap-0">
@@ -60,7 +64,11 @@ export const _Button: Story = {
                   size="icon"
                   onClick={handleClick}
                 >
-                  <ChevronRightIcon className="size-4" />
+                  <ChevronRightIcon
+                    className="size-4"
+                    role="img"
+                    aria-label="Next page"
+                  />
                 </Button>
               </div>
             </div>

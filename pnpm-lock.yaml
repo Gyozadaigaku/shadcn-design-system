@@ -166,6 +166,9 @@ devDependencies:
   '@ianvs/prettier-plugin-sort-imports':
     specifier: ^3.7.2
     version: 3.7.2(prettier@2.8.8)
+  '@storybook/addon-a11y':
+    specifier: ^8.0.5
+    version: 8.0.5
   '@storybook/addon-actions':
     specifier: ^8.0.5
     version: 8.0.5
@@ -3591,6 +3594,13 @@ packages:
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
+    dev: true
+
+  /@storybook/addon-a11y@8.0.5:
+    resolution: {integrity: sha512-QWMbFyZ3Cs859OZ4hoidfZBVHpQ+BAsyu88g/o+AKh5hP3/SRu8g+D/ZVtt2vkwN4jvIQzNDpzjIYKp1zRDczQ==}
+    dependencies:
+      '@storybook/addon-highlight': 8.0.5
+      axe-core: 4.7.0
     dev: true
 
   /@storybook/addon-actions@8.0.5:
